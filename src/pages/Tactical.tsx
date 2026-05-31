@@ -1,61 +1,18 @@
 /** ============================================================================
  *  BASMI Defence Systems - Tactical & Mission Support (Tactical.tsx)
  *  ----------------------------------------------------------------------------
- *  Purpose: Portrays premium body armours, helmet assemblies, carry systems, 
- *           and load-bearing configurations.
- *  Editable Parameters:
- *    - Mehler-inspired main landing banners text/headings.
- *    - FULL BLEED IMAGES: solders and equipment links and graphics config.
- *    - PRODUCT CARD CATEGORIES: vest, helmet, or belt configurations descriptions.
+ *  Purpose: Displays the full-bleed interactive dynamic image splits for body
+ *           armours, carry systems, and load-bearing configurations.
  *  ============================================================================
  */
-
-import { GlassCard } from '../components/GlassCard';
-import { motion } from 'framer-motion';
 
 export const Tactical = () => {
   return (
     // --- MAIN TACTICAL LAYOUT CONTAINER ---
     <div className="min-h-screen bg-background pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* 1. HERO GRAPHIC COVER SECTION */}
-        <section className="relative mb-24 overflow-hidden rounded-2xl glass-panel group border-slate-200/60 shadow-md">
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="/tactical_gear.png" 
-              alt="Elite Tactical Personnel" 
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-90 transition-opacity duration-700" 
-            />
-            {/* Thematic background blur/shade blends */}
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent" />
-          </div>
-          
-          <div className="relative z-10 px-8 py-20 md:py-32 md:px-16 flex flex-col justify-end h-full min-h-[70vh]">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-2xl"
-            >
-              <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight uppercase mb-4">
-                Unyielding <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 font-extrabold">Performance</span>
-              </h1>
-              <p className="text-lg text-slate-700 font-light max-w-lg mb-8 leading-relaxed">
-                Engineered for specialized mission profiles. Total modularity for plate carriers, helmets, and biomechanically optimized tactical suits.
-              </p>
-              
-              <button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3.5 rounded-md uppercase tracking-widest text-xs font-bold transition-all shadow-md">
-                Configure Loadout
-              </button>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-
-      {/* 2. FULL-BLEED INTERACTIVE SECTION: Dynamic Horizontal Splits */}
-      <div className="w-full bg-slate-950 border-y border-slate-800 relative shadow-xl mb-24">
+      
+      {/* FULL-BLEED INTERACTIVE SECTION: Dynamic Horizontal Splits */}
+      <div className="w-full bg-slate-950 border-y border-slate-800 relative shadow-xl">
         <div className="group/container flex flex-col lg:flex-row w-full min-h-[90vh] bg-slate-950">
           
           {/* Card 1: Ballistic Protection */}
@@ -106,51 +63,6 @@ export const Tactical = () => {
         </div>
       </div>
 
-      {/* 3. HARDWARE SPECIFIC GRID SYSTEM */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8 tracking-wider uppercase border-l-4 border-slate-300 pl-4">Equipment Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            {/* Category: Vests */}
-            <GlassCard className="h-80 flex flex-col justify-end p-6 relative group overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent z-10" />
-               <div className="absolute inset-0 bg-slate-100 z-0 flex items-center justify-center">
-                  <span className="text-slate-400 font-mono text-xs">[VISUAL REDACTED]</span>
-               </div>
-               <div className="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                 <h3 className="text-xl font-bold text-slate-900 uppercase tracking-wider mb-2">Ballistic Vests</h3>
-                 <p className="text-sm text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">Lightweight composite armor offering maximum mobility without compromising Level IV rating.</p>
-               </div>
-            </GlassCard>
-            
-            {/* Category: Helmets */}
-            <GlassCard delay={0.1} className="h-80 flex flex-col justify-end p-6 relative group overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent z-10" />
-               <div className="absolute inset-0 bg-slate-100 z-0 flex items-center justify-center">
-                  <span className="text-slate-400 font-mono text-xs">[VISUAL REDACTED]</span>
-               </div>
-               <div className="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                 <h3 className="text-xl font-bold text-slate-900 uppercase tracking-wider mb-2">Combat Helmets</h3>
-                 <p className="text-sm text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">Integrated rail systems, NVG mounts, and impact-absorbing inner geometries.</p>
-               </div>
-            </GlassCard>
-
-            {/* Category: Load Carrying */}
-            <GlassCard delay={0.2} className="h-80 flex flex-col justify-end p-6 relative group overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent z-10" />
-               <div className="absolute inset-0 bg-slate-100 z-0 flex items-center justify-center">
-                  <span className="text-slate-400 font-mono text-xs">[VISUAL REDACTED]</span>
-               </div>
-               <div className="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                 <h3 className="text-xl font-bold text-slate-900 uppercase tracking-wider mb-2">Load Bearing</h3>
-                 <p className="text-sm text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">Modular chest rigs and belts for agile ammunition distribution and critical med-kits.</p>
-               </div>
-            </GlassCard>
-          </div>
-        </div>
-
-      </div>
     </div>
   );
 };
