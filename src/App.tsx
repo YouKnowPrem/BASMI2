@@ -22,12 +22,22 @@ import { Aerospace } from './pages/Aerospace';
 import { Indigenization } from './pages/Indigenization';
 import { Contact } from './pages/Contact';
 
-// ScrollToTop: Forces viewport coordinates to (0,0) on page route changes
+// ScrollToTop: Forces viewport coordinates to (0,0) or scrolls to target hash
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      const timer = setTimeout(() => {
+        const element = document.getElementById(hash.slice(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   return null;
 };
 

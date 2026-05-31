@@ -14,6 +14,7 @@ export const Navbar = () => {
   // --- STATE & EFFETS ---
   const [isOpen, setIsOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -54,18 +55,41 @@ export const Navbar = () => {
           
           {/* 2. TEXT MENU LINKS (CENTER) */}
           <div className="hidden lg:flex items-center justify-center space-x-2 xl:space-x-4">
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `px-4 py-2 rounded-md text-sm font-semibold transition-all ${
-                  isActive 
+            {/* Company Dropdown Trigger */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsCompanyOpen(true)}
+              onMouseLeave={() => setIsCompanyOpen(false)}
+            >
+              <button
+                className={`px-4 py-2 rounded-md text-sm font-semibold transition-all flex items-center space-x-1 ${
+                  isCompanyOpen 
                     ? 'text-blue-600 bg-blue-50/60' 
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                }`
-              }
-            >
-              Company
-            </NavLink>
+                }`}
+              >
+                <span>Company</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isCompanyOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* Company Dropdown Panel */}
+              {isCompanyOpen && (
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[240px] z-50">
+                  <div className="glass-panel p-4 rounded-xl border border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-xl animate-fade-in">
+                    <ul className="space-y-3 text-sm">
+                      <li>
+                        <Link to="/about" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">About BASMI</Link>
+                        <span className="text-xs text-slate-500 block mt-0.5">Corporate profile & capabilities</span>
+                      </li>
+                      <li>
+                        <Link to="/about#mission" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Mission statement & Vision</Link>
+                        <span className="text-xs text-slate-500 block mt-0.5">Operational targets & core values</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Integrated Solutions Dropdown Trigger */}
             <div 
@@ -147,19 +171,15 @@ export const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden glass-panel rounded-none border-t border-slate-200 bg-white/95 backdrop-blur-xl shadow-lg">
           <div className="px-3 pt-2 pb-5 space-y-1">
-            <NavLink
-              to="/about"
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `block px-4 py-2.5 rounded-md text-base font-semibold ${
-                  isActive 
-                    ? 'text-blue-600 bg-blue-50/60' 
-                    : 'text-slate-700 hover:text-slate-950 hover:bg-slate-50'
-                }`
-              }
-            >
+            {/* Mobile Dropdown Header for Company */}
+            <div className="px-4 pt-2 pb-1 text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">
               Company
-            </NavLink>
+            </div>
+            
+            <div className="pl-4 space-y-1 text-sm border-l-2 border-slate-200 ml-4 mb-2">
+              <Link to="/about" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• About BASMI</Link>
+              <Link to="/about#mission" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Mission statement & Vision</Link>
+            </div>
 
             {/* Mobile Dropdown Header for Solutions */}
             <div className="px-4 pt-4 pb-2 text-xs font-bold text-slate-400 uppercase tracking-widest border-t border-slate-100 mt-2">
