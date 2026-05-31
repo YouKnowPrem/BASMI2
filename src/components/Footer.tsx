@@ -21,12 +21,11 @@ export const Footer = () => {
           <div className="flex flex-col items-start">
             <Link to="/" className="flex flex-col items-start mb-6 shrink-0">
               <img 
-                src="/basmi_logo.png" 
+                src="/BASMI_svg.svg" 
                 alt="BASMI Logo" 
                 className="h-14 w-auto object-contain mb-3" 
                 onError={(e) => { e.currentTarget.style.display = 'none'; }} 
               />
-              <span className="text-[10px] text-blue-600 tracking-widest uppercase mt-1 font-semibold">Defence. Innovation. Technology.</span>
             </Link>
             <p className="text-sm text-slate-600 leading-relaxed mb-4">
               Address: RZ B1/132A, Mahavir Enclave, Dabri, South West Delhi, New Delhi - 110045

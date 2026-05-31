@@ -1,11 +1,8 @@
 /** ============================================================================
  *  BASMI Defence Systems - Homepage Hero Component (Hero.tsx)
  *  ----------------------------------------------------------------------------
- *  Purpose: Premium interactive introductory screen featuring a revolving 
- *           3D-like holographic logo, dynamic action buttons, and animated entrance.
- *  Editable Parameters:
- *    - To change background graphics, update the url(/background.png).
- *    - To change tags or main headings, update respective block elements below.
+ *  Purpose: Premium interactive introductory screen featuring dynamic action
+ *           buttons and animated entrance, optimized for minimalist clean layout.
  *  ============================================================================
  */
 
@@ -35,11 +32,6 @@ export const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto flex flex-col items-center text-center"
         >
-          {/* MILITARY/CORP THEMATIC TAGLINE BADGE */}
-          <div className="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200/80 rounded-full px-4 py-1.5 mb-8 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-            <span className="text-xs font-semibold tracking-widest text-slate-600 uppercase">Defence. Innovation. Technology.</span>
-          </div>
           
           {/* SECURE CAPITALIZED HERO HEADING */}
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] mb-6 uppercase">
@@ -55,20 +47,13 @@ export const Hero = () => {
           </p>
           
           {/* ACTION BUTTON CALL-TO-ACTIONS */}
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center w-full max-w-md mx-auto sm:max-w-none">
-            <Link 
-              to="/security"
-              className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-semibold transition-all shadow-md hover:shadow-blue-500/25 group cursor-pointer"
-            >
-              Explore Solutions
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            
+          <div className="flex justify-center w-full max-w-md mx-auto sm:max-w-none">
             <Link 
               to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/80 rounded-md font-semibold transition-all shadow-md hover:shadow-slate-200/50 cursor-pointer"
+              className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-semibold transition-all shadow-md hover:shadow-blue-500/25 group cursor-pointer"
             >
               Request Consultation
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </motion.div>
