@@ -84,64 +84,24 @@ export const Navbar = () => {
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {/* Mega Dropdown Panel */}
+              {/* Dropdown Panel */}
               {isSolutionsOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[850px] z-50">
-                  <div className="glass-panel p-6 grid grid-cols-3 gap-6 rounded-xl border border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-xl animate-fade-in">
-                    
-                    {/* COLUMN 1: Capabilities & Solutions */}
-                    <div>
-                      <ul className="space-y-4 text-sm">
-                        <li>
-                          <Link to="/about" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">1. Core Capabilities</Link>
-                          <span className="text-xs text-slate-500 block mt-0.5">Strategic aerospace, defence & military systems</span>
-                        </li>
-                        <li>
-                          <Link to="/tactical" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">2. Defence Equipment & Solutions</Link>
-                          <span className="text-xs text-slate-500 block mt-0.5">Strategic systems integration & supply</span>
-                        </li>
-                        <li>
-                          <Link to="/uas" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">3. Aerospace Systems</Link>
-                          <span className="text-xs text-slate-500 block mt-0.5">Unmanned aircraft and counter UAS systems</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* COLUMN 2: Tactical & Protection Systems */}
-                    <div>
-                      <ul className="space-y-4 text-sm">
-                        <li>
-                          <Link to="/aerospace" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">4. Surface & Sub-Surface Systems</Link>
-                          <span className="text-xs text-slate-500 block mt-0.5">Unmanned vessels & underwater vehicles</span>
-                        </li>
-                        <li>
-                          <Link to="/tactical" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">5. Tactical & Mission Support</Link>
-                          <span className="text-xs text-slate-500 block mt-0.5">Tactical gear & specialized support systems</span>
-                        </li>
-                        <li>
-                          <Link to="/security" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">6. Security & Force Protection</Link>
-                          <span className="text-xs text-slate-500 block mt-0.5">Hostile vehicle mitigation, perimeter security & gates</span>
-                        </li>
-                      </ul>
-                    </div>
-
-                    {/* COLUMN 3: Advanced Tech & Lifecycle Management */}
-                    <div>
-                      <ul className="space-y-4 text-sm">
-                        <li>
-                          <Link to="/about" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">7. Advanced & Dual-Use Tech</Link>
-                          <span className="text-xs text-slate-500 block mt-0.5">Next-generation tech & dual-use applications</span>
-                        </li>
-                        <li>
-                          <Link to="/indigenization" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">8. Indigenisation & Self-reliance</Link>
-                          <span className="text-xs text-slate-500 block mt-0.5">Aviation, marine, and sub-marine indigenised systems</span>
-                        </li>
-                        <li>
-                          <Link to="/contact" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">9. Project & Lifecycle Management</Link>
-                          <span className="text-xs text-slate-500 block mt-0.5">Sustainment support & program consulting</span>
-                        </li>
-                      </ul>
-                    </div>
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[350px] z-50">
+                  <div className="glass-panel p-5 rounded-xl border border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-xl animate-fade-in">
+                    <ul className="space-y-4 text-sm">
+                      <li>
+                        <Link to="/aerospace" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">1. Aerospace Systems</Link>
+                        <span className="text-xs text-slate-500 block mt-0.5">Advanced aerospace & flight technologies</span>
+                      </li>
+                      <li>
+                        <Link to="/tactical" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">2. Defence Equipments</Link>
+                        <span className="text-xs text-slate-500 block mt-0.5">Tactical systems integration & supply</span>
+                      </li>
+                      <li>
+                        <Link to="/security" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">3. Hostile Vehicle Mitigation Solutions</Link>
+                        <span className="text-xs text-slate-500 block mt-0.5">Kinetic impact barriers & perimeter security</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               )}
@@ -207,15 +167,9 @@ export const Navbar = () => {
             </div>
             
             <div className="pl-4 space-y-1 text-sm border-l-2 border-slate-200 ml-4 mb-2">
-              <Link to="/about" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 1. Core Capabilities</Link>
-              <Link to="/tactical" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 2. Defence Equipment & Solutions</Link>
-              <Link to="/uas" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 3. Aerospace Systems</Link>
-              <Link to="/aerospace" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 4. Surface and Sub-Surface Systems</Link>
-              <Link to="/tactical" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 5. Tactical & Mission Support</Link>
-              <Link to="/security" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 6. Security & Force Protection Systems</Link>
-              <Link to="/about" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 7. Advanced & Dual-Use Tech</Link>
-              <Link to="/indigenization" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 8. Indigenisation & Self-reliance</Link>
-              <Link to="/contact" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 9. Project & Lifecycle Management</Link>
+              <Link to="/aerospace" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 1. Aerospace Systems</Link>
+              <Link to="/tactical" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 2. Defence Equipments</Link>
+              <Link to="/security" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 3. Hostile Vehicle Mitigation Solutions</Link>
             </div>
 
             <NavLink
