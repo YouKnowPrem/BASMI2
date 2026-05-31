@@ -10,7 +10,7 @@
  */
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { GlassCard } from '../components/GlassCard';
 
 export const Contact = () => {
@@ -39,7 +39,6 @@ export const Contact = () => {
           {/* COLUMN 1: Corporate Details */}
           <div className="space-y-8">
             <GlassCard className="p-8">
-              <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-wider">Corporate Headquarters</h2>
               <div className="space-y-6">
                 
                 {/* Physical HQ Address */}
@@ -72,19 +71,6 @@ export const Contact = () => {
                   </div>
                 </div>
 
-                {/* Telephone Request (Secure Protocol) */}
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-blue-50 border border-blue-100 rounded-lg shrink-0 text-blue-600">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-slate-800 font-bold mb-1 uppercase tracking-wider text-sm">Phone</h3>
-                    <p className="text-slate-600 text-sm">
-                      Available for secure communications upon request.
-                    </p>
-                  </div>
-                </div>
-
               </div>
             </GlassCard>
 
@@ -96,7 +82,6 @@ export const Contact = () => {
 
           {/* COLUMN 2: Secure Contact Form */}
           <GlassCard className="p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-wider">Secure Transmission</h2>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -154,7 +139,7 @@ export const Contact = () => {
                 type="submit"
                 className="w-full bg-blue-600 text-white font-bold rounded-md px-4 py-3.5 uppercase tracking-widest hover:bg-blue-700 transition-colors shadow-sm"
               >
-                Transmit Message
+                Send
               </button>
             </form>
           </GlassCard>
