@@ -30,9 +30,6 @@ export const SecurityParams = () => {
         <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase mb-3">
           Hostile Vehicle Mitigation <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 font-extrabold">Solutions</span>
         </h1>
-        <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
-          High-performance hostile vehicle mitigation and advanced perimeter intrusion protection systems.
-        </p>
       </div>
 
       {/* FULL-BLEED INTERACTIVE GRID ROW 1 & 2 */}

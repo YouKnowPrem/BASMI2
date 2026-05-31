@@ -20,8 +20,8 @@ export const Aerospace = () => {
         {/* HIGH-TECH IMAGE CARD BANNER */}
         <div className="relative overflow-hidden rounded-2xl glass-panel border border-slate-200/80 shadow-md group h-96 md:h-[450px]">
           <img 
-            src="/aerospace_systems.png" 
-            alt="Advanced Tactical Drone Flying" 
+            src="/drone_swarm.png" 
+            alt="Drone Swarm Coordinated Operation" 
             className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
           />
