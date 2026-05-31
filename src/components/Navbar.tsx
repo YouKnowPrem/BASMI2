@@ -44,7 +44,7 @@ export const Navbar = () => {
           <div className="flex-1 flex justify-start items-center">
             <NavLink to="/" className="flex items-center py-2 shrink-0">
               <img 
-                src="/basmi_logo.png" 
+                src="/BASMI_svg.svg" 
                 alt="BASMI Logo" 
                 className="h-18 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105" 
                 onError={(e) => { e.currentTarget.style.display = 'none'; }} 
