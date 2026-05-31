@@ -23,7 +23,7 @@ export const Footer = () => {
               <img 
                 src="/BASMI_svg.svg" 
                 alt="BASMI Logo" 
-                className="h-14 w-auto object-contain mb-3" 
+                className="h-18 md:h-20 lg:h-24 w-auto object-contain mb-3" 
                 onError={(e) => { e.currentTarget.style.display = 'none'; }} 
               />
             </Link>
