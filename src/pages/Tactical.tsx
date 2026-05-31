@@ -1,7 +1,7 @@
 /** ============================================================================
  *  BASMI Defence Systems - Tactical & Mission Support (Tactical.tsx)
  *  ----------------------------------------------------------------------------
- *  Purpose: Displays the centered Defence Equipments title and full-bleed
+ *  Purpose: Displays the centered Defence Equipment title and full-bleed
  *           interactive dynamic image splits for body armours and carry systems.
  *  ============================================================================
  */
@@ -14,7 +14,7 @@ export const Tactical = () => {
       {/* SECTION HEADER BLOCK */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12 lg:mb-16">
         <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase mb-3">
-          Defence <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 font-extrabold">Equipments</span>
+          Defence <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 font-extrabold">Equipment</span>
         </h1>
       </div>
 

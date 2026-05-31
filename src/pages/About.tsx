@@ -1,61 +1,15 @@
 /** ============================================================================
  *  BASMI Defence Systems - Corporate Profile Page Component (About.tsx)
  *  ----------------------------------------------------------------------------
- *  Purpose: Displays the company profile, operational mission, corporate values, 
- *           operational frameworks (e.g. SWARAJ), and leadership credentials.
- *  Editable Parameters:
- *    - values array: Key pillars of business operations.
- *    - leadership array: Operational areas and backgrounds of company leadership.
+ *  Purpose: Displays the company profile, operational mission, and strategic
+ *           operational frameworks (e.g. SWARAJ).
  *  ============================================================================
  */
 
 import { GlassCard } from '../components/GlassCard';
-import { Target, Compass, Award, Users, Handshake, ChevronRight, TrendingUp } from 'lucide-react';
+import { Target, Compass, Users, Handshake, ChevronRight, TrendingUp } from 'lucide-react';
 
 export const About = () => {
-  // --- STATIC VALUES & PRINCIPLES CONFIGURATION ---
-  const values = [
-    {
-      title: "Innovation & Excellence",
-      description: "Driving continuous advancement in aerospace and defence technologies."
-    },
-    {
-      title: "Integrity & Responsibility",
-      description: "Upholding the highest standards of ethics, safety, and operational accountability."
-    },
-    {
-      title: "Quality & Reliability",
-      description: "Ensuring performance, extreme security standards, and mission readiness in all deliverables."
-    },
-    {
-      title: "Collaboration & Partnership",
-      description: "Building resilient, long-term strategic relationships with stakeholders across strategic sectors."
-    },
-    {
-      title: "National Commitment & Global Outlook",
-      description: "Supporting national indigenisation priorities (Atmanirbhar Bharat) while engaging in global standard innovations."
-    }
-  ];
-
-  // --- STATIC LEADERSHIP & OPERATIONAL EXPERTISES ---
-  const leadership = [
-    {
-      role: "Strategic Operational Leadership",
-      background: "Defence & National Security",
-      desc: "Drawn from extensive operational experience in the Indian Armed Forces, bringing real-world tactical knowledge, strategic planning, and security domain expertise."
-    },
-    {
-      role: "Advanced Systems Engineering R&D",
-      background: "Aerospace & Technology Integration",
-      desc: "Led by engineers with strong research backgrounds in unmanned systems, aerospace mechanical systems, and secure communications protocols."
-    },
-    {
-      role: "Strategic Global Program Management",
-      background: "Lifecycle & Joint Ventures",
-      desc: "Focused on technology transfer, co-development frameworks, and international regulatory compliance to support strategic global partners."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background pt-32 lg:pt-48 pb-24 lg:pb-36">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,26 +63,7 @@ export const About = () => {
           </GlassCard>
         </div>
 
-        {/* 3. CORE VALUES SECTION */}
-        <div className="mb-24">
-          <div className="flex items-center space-x-3 mb-10">
-            <div className="bg-blue-50 p-2.5 rounded-lg text-blue-600 border border-blue-100">
-              <Award className="h-5 w-5" />
-            </div>
-            <h2 className="text-2xl font-extrabold text-slate-900 uppercase tracking-wider">Core Values</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {values.map((v, i) => (
-              <GlassCard key={i} className="p-6 flex flex-col hover:border-blue-500/25 transition-all duration-300" delay={i * 0.05}>
-                <span className="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2 font-mono">0{i+1}</span>
-                <h3 className="text-base font-bold text-slate-900 mb-2">{v.title}</h3>
-                <p className="text-xs text-slate-500 leading-relaxed text-justify">{v.description}</p>
-              </GlassCard>
-            ))}
-          </div>
-        </div>
-
-        {/* 4. ENGAGEMENT AND PARTNERSHIP FRAMEWORKS */}
+        {/* 3. ENGAGEMENT AND PARTNERSHIP FRAMEWORKS */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24">
           {/* Partnership Engagement Model */}
           <GlassCard className="p-8 hover:border-blue-500/25 transition-all duration-300">
@@ -186,29 +121,6 @@ export const About = () => {
               </div>
             </div>
           </GlassCard>
-        </div>
-
-        {/* 5. LEADERSHIP PROFILE SECTION */}
-        <div className="border-t border-slate-200 pt-16">
-          <div className="flex items-center space-x-3 mb-10">
-            <div className="bg-blue-50 p-2.5 rounded-lg text-blue-600 border border-blue-100">
-              <Users className="h-5 w-5" />
-            </div>
-            <h2 className="text-2xl font-extrabold text-slate-900 uppercase tracking-wider">Operational Leadership</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {leadership.map((leader, i) => (
-              <GlassCard key={i} className="p-8 hover:border-blue-500/30 transition-all duration-300 flex flex-col" delay={i * 0.1}>
-                <div className="border-b border-slate-200 pb-4 mb-4">
-                  <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">{leader.background}</span>
-                  <h3 className="text-lg font-extrabold text-slate-900 mt-1 uppercase leading-tight">{leader.role}</h3>
-                </div>
-                <p className="text-sm text-slate-600 leading-relaxed text-justify flex-grow">
-                  {leader.desc}
-                </p>
-              </GlassCard>
-            ))}
-          </div>
         </div>
 
       </div>

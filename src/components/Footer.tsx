@@ -14,8 +14,8 @@ export const Footer = () => {
     <footer className="border-t border-slate-200 bg-slate-50 pt-16 pb-8 text-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* THREE COLUMN GRID SYSTEM */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* TWO COLUMN GRID SYSTEM */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
           {/* COLUMN 1: Company Logo, Address & Primary Secure Email */}
           <div className="flex flex-col items-start">
@@ -36,33 +36,13 @@ export const Footer = () => {
           </div>
 
           {/* COLUMN 2: Corporate Directory & Quick Links */}
-          <div className="md:pl-8">
+          <div className="md:text-right md:justify-self-end">
             <h3 className="text-sm font-bold text-slate-900 tracking-wider uppercase mb-4">Solutions</h3>
             <ul className="space-y-3 text-sm text-slate-600">
               <li><Link to="/aerospace" className="hover:text-blue-600 transition-colors font-medium">Aerospace Systems</Link></li>
-              <li><Link to="/tactical" className="hover:text-blue-600 transition-colors font-medium">Defence Equipments</Link></li>
+              <li><Link to="/tactical" className="hover:text-blue-600 transition-colors font-medium">Defence Equipment</Link></li>
               <li><Link to="/security" className="hover:text-blue-600 transition-colors font-medium">Hostile Vehicle Mitigation Solutions</Link></li>
             </ul>
-          </div>
-
-          {/* COLUMN 3: Business Consultation Form Area */}
-          <div>
-            <h3 className="text-sm font-bold text-slate-900 tracking-wider uppercase mb-4">Request Consultation</h3>
-            <p className="text-sm text-slate-600 mb-4">Reach out to our experts for end-to-end integrated protection systems.</p>
-            <form className="flex space-x-2" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Business email" 
-                className="bg-white border border-slate-200 rounded-md px-3 py-2 w-full text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors shadow-sm"
-                autoComplete="off"
-              />
-              <button 
-                type="button" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition-colors border border-transparent shadow-sm shrink-0"
-              >
-                Send
-              </button>
-            </form>
           </div>
         </div>
 

@@ -115,7 +115,7 @@ export const Navbar = () => {
                         <Link to="/aerospace" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Aerospace Systems</Link>
                       </li>
                       <li>
-                        <Link to="/tactical" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Defence Equipments</Link>
+                        <Link to="/tactical" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Defence Equipment</Link>
                       </li>
                       <li>
                         <Link to="/security" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Hostile Vehicle Mitigation Solutions</Link>
@@ -183,7 +183,7 @@ export const Navbar = () => {
             
             <div className="pl-4 space-y-1 text-sm border-l-2 border-slate-200 ml-4 mb-2">
               <Link to="/aerospace" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Aerospace Systems</Link>
-              <Link to="/tactical" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Defence Equipments</Link>
+              <Link to="/tactical" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Defence Equipment</Link>
               <Link to="/security" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Hostile Vehicle Mitigation Solutions</Link>
             </div>
 
