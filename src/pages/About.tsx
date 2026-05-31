@@ -1,13 +1,12 @@
 /** ============================================================================
  *  BASMI Defence Systems - Corporate Profile Page Component (About.tsx)
  *  ----------------------------------------------------------------------------
- *  Purpose: Displays the company profile, operational mission, and strategic
- *           operational frameworks (e.g. SWARAJ).
+ *  Purpose: Displays the company profile and operational mission.
  *  ============================================================================
  */
 
 import { GlassCard } from '../components/GlassCard';
-import { Target, Compass, Users, Handshake, ChevronRight, TrendingUp } from 'lucide-react';
+import { Target, Compass } from 'lucide-react';
 
 export const About = () => {
   return (
@@ -60,66 +59,6 @@ export const About = () => {
             <p className="text-slate-600 leading-relaxed text-justify text-sm md:text-base flex-grow">
               To be a globally trusted aerospace, defence, and security technology partner, advancing indigenous capability, fostering innovation and collaboration, and delivering integrated, high-performance solutions that enhance operational readiness and support national and global security objectives, while contributing to Make in India and Atmanirbhar Bharat.
             </p>
-          </GlassCard>
-        </div>
-
-        {/* 3. ENGAGEMENT AND PARTNERSHIP FRAMEWORKS */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24">
-          {/* Partnership Engagement Model */}
-          <GlassCard className="p-8 hover:border-blue-500/25 transition-all duration-300">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="bg-blue-50 p-2 rounded-lg text-blue-600 border border-blue-100">
-                <Users className="h-5 w-5" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 uppercase tracking-wider">Engagement Model</h3>
-            </div>
-            <p className="text-sm text-slate-600 leading-relaxed text-justify mb-6">
-              BASMI actively collaborates with: Government and defence organisations, Aerospace and defence OEMs, Research institutions and technology partners, Public Sector Undertakings (PSUs) and Defence Public Sector Undertakings (DPSUs).
-            </p>
-            <div className="text-xs text-slate-500 border-t border-slate-100 pt-4 space-y-2">
-              <div className="flex items-center"><ChevronRight className="h-3.5 w-3.5 text-blue-600 mr-1" /> Joint Ventures & Partnerships</div>
-              <div className="flex items-center"><ChevronRight className="h-3.5 w-3.5 text-blue-600 mr-1" /> Technology Transfer (ToT)</div>
-              <div className="flex items-center"><ChevronRight className="h-3.5 w-3.5 text-blue-600 mr-1" /> Indigenisation co-developments</div>
-            </div>
-          </GlassCard>
-
-          {/* Strategic Outlook */}
-          <GlassCard className="p-8 hover:border-blue-500/25 transition-all duration-300" delay={0.1}>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="bg-blue-50 p-2 rounded-lg text-blue-600 border border-blue-100">
-                <TrendingUp className="h-5 w-5" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 uppercase tracking-wider">Strategic Outlook</h3>
-            </div>
-            <p className="text-sm text-slate-600 leading-relaxed text-justify mb-6">
-              With strong capabilities across aerospace, defence, security, and advanced technologies, BASMI is positioned to emerge as a trusted partner for governments and industry worldwide. The company continues to expand its role in delivering mission-critical solutions that address evolving security, technological, and operational challenges.
-            </p>
-            <div className="text-xs text-blue-700 font-semibold bg-blue-50 border border-blue-100 rounded px-3 py-2">
-              Positioned to drive next-generation strategic indigenisation programs worldwide.
-            </div>
-          </GlassCard>
-
-          {/* Strategic Partnerships & Integrations */}
-          <GlassCard className="p-8 hover:border-blue-500/25 transition-all duration-300" delay={0.2}>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="bg-blue-50 p-2 rounded-lg text-blue-600 border border-blue-100">
-                <Handshake className="h-5 w-5" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 uppercase tracking-wider">Partnerships</h3>
-            </div>
-            <p className="text-sm text-slate-600 leading-relaxed text-justify mb-6">
-              To drive self-reliance (Atmanirbhar Bharat), BASMI develops strategic ties and incorporates technologies from industry-leading indigenisation frameworks and specialized advanced technology manufacturers.
-            </p>
-            <div className="space-y-3">
-              <div className="border border-slate-200 bg-slate-50 rounded-lg p-3">
-                <span className="text-xs font-bold text-slate-800 block">SWARAJ Framework</span>
-                <span className="text-[10px] text-slate-500 block">Indigenised tactical defense architectures</span>
-              </div>
-              <div className="border border-slate-200 bg-slate-50 rounded-lg p-3">
-                <span className="text-xs font-bold text-slate-800 block">FPV MOTOR Integration</span>
-                <span className="text-[10px] text-slate-500 block">High-power tactical unmanned systems</span>
-              </div>
-            </div>
           </GlassCard>
         </div>
 
