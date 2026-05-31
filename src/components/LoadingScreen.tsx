@@ -68,7 +68,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           <img 
             src="/basmi_logo.png" 
             alt="BASMI Logo" 
-            className="w-48 h-auto object-contain drop-shadow-2xl brightness-125"
+            className="w-64 lg:w-96 h-auto object-contain drop-shadow-2xl brightness-125"
             onError={(e) => { e.currentTarget.style.display = 'none'; }}
           />
           {/* Breathing glow backing behind brand logo */}

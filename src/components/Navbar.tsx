@@ -38,7 +38,7 @@ export const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24 lg:h-28">
           
           {/* 1. BRAND LOGO (LEFT) - SLIGHTLY BIGGER */}
           <div className="flex-1 flex justify-start items-center">
@@ -46,7 +46,7 @@ export const Navbar = () => {
               <img 
                 src="/basmi_logo.png" 
                 alt="BASMI Logo" 
-                className="h-14 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105" 
+                className="h-18 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105" 
                 onError={(e) => { e.currentTarget.style.display = 'none'; }} 
               />
             </NavLink>
