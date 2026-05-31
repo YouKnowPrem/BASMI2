@@ -16,20 +16,20 @@ import { motion } from 'framer-motion';
 export const Tactical = () => {
   return (
     // --- MAIN TACTICAL LAYOUT CONTAINER ---
-    <div className="min-h-screen bg-[#050505] pt-24 pb-20">
+    <div className="min-h-screen bg-background pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* 1. HERO GRAPHIC COVER SECTION (Mehler-inspired) */}
-        <section className="relative mb-24 overflow-hidden rounded-2xl glass-panel group border-white/5">
+        {/* 1. HERO GRAPHIC COVER SECTION */}
+        <section className="relative mb-24 overflow-hidden rounded-2xl glass-panel group border-slate-200/60 shadow-md">
           <div className="absolute inset-0 z-0">
             <img 
               src="/tactical_gear.png" 
               alt="Elite Tactical Personnel" 
-              className="w-full h-full object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-700" 
+              className="w-full h-full object-cover opacity-80 group-hover:opacity-90 transition-opacity duration-700" 
             />
             {/* Thematic background blur/shade blends */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-[#050505]/50" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent" />
           </div>
           
           <div className="relative z-10 px-8 py-20 md:py-32 md:px-16 flex flex-col justify-end h-full min-h-[70vh]">
@@ -39,14 +39,14 @@ export const Tactical = () => {
               transition={{ duration: 0.8 }}
               className="max-w-2xl"
             >
-              <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight uppercase mb-4">
-                Unyielding <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-600">Performance</span>
+              <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight uppercase mb-4">
+                Unyielding <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 font-extrabold">Performance</span>
               </h1>
-              <p className="text-lg text-gray-300 font-light max-w-lg mb-8">
+              <p className="text-lg text-slate-700 font-light max-w-lg mb-8 leading-relaxed">
                 Engineered for specialized mission profiles. Total modularity for plate carriers, helmets, and biomechanically optimized tactical suits.
               </p>
               
-              <button className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-3 rounded-md uppercase tracking-widest text-sm font-semibold transition-all backdrop-blur-md">
+              <button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3.5 rounded-md uppercase tracking-widest text-xs font-bold transition-all shadow-md">
                 Configure Loadout
               </button>
             </motion.div>
@@ -55,8 +55,8 @@ export const Tactical = () => {
       </div>
 
       {/* 2. FULL-BLEED INTERACTIVE SECTION: Dynamic Horizontal Splits */}
-      <div className="w-full bg-[#020202] border-y border-white/10 relative shadow-2xl mb-24">
-        <div className="group/container flex flex-col lg:flex-row w-full min-h-[90vh] bg-[#020202]">
+      <div className="w-full bg-slate-950 border-y border-slate-800 relative shadow-xl mb-24">
+        <div className="group/container flex flex-col lg:flex-row w-full min-h-[90vh] bg-slate-950">
           
           {/* Card 1: Ballistic Protection */}
           <div className="flex-1 relative overflow-hidden group/card transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] filter brightness-[0.55] contrast-[1.1] lg:group-hover/container:opacity-50 lg:group-hover/container:brightness-50 lg:hover:!opacity-100 lg:hover:!brightness-110 lg:hover:!contrast-125 lg:hover:flex-[1.25] cursor-pointer">
@@ -74,7 +74,7 @@ export const Tactical = () => {
           </div>
 
           {/* Card 2: Carry Systems */}
-          <div className="flex-1 relative overflow-hidden group/card transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] filter brightness-[0.55] contrast-[1.1] border-y lg:border-y-0 lg:border-x border-white/10 lg:group-hover/container:opacity-50 lg:group-hover/container:brightness-50 lg:hover:!opacity-100 lg:hover:!brightness-110 lg:hover:!contrast-125 lg:hover:flex-[1.25] cursor-pointer">
+          <div className="flex-1 relative overflow-hidden group/card transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] filter brightness-[0.55] contrast-[1.1] border-y lg:border-y-0 lg:border-x border-slate-800 lg:group-hover/container:opacity-50 lg:group-hover/container:brightness-50 lg:hover:!opacity-100 lg:hover:!brightness-110 lg:hover:!contrast-125 lg:hover:flex-[1.25] cursor-pointer">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.25)_0%,transparent_60%)] opacity-0 group-hover/card:opacity-100 transition-opacity duration-[800ms] pointer-events-none z-10 mix-blend-overlay" />
             <img src="/soldier_carrying.png" alt="Carrying Systems" className="absolute w-full h-full object-cover object-top transition-transform duration-[1200ms] ease-[cubic-bezier(0.25,1,0.5,1)] scale-[1.0] group-hover/card:scale-[1.08] z-0" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/80 z-10 opacity-60 group-hover/card:opacity-30 transition-opacity duration-[800ms]" />
@@ -109,42 +109,42 @@ export const Tactical = () => {
       {/* 3. HARDWARE SPECIFIC GRID SYSTEM */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-8 tracking-wider uppercase border-l-4 border-white/20 pl-4">Equipment Categories</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-8 tracking-wider uppercase border-l-4 border-slate-300 pl-4">Equipment Categories</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* Category: Vests */}
             <GlassCard className="h-80 flex flex-col justify-end p-6 relative group overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-               <div className="absolute inset-0 bg-[#111] z-0 flex items-center justify-center">
-                  <span className="text-gray-700 font-mono text-xs">[VISUAL REDACTED]</span>
+               <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent z-10" />
+               <div className="absolute inset-0 bg-slate-100 z-0 flex items-center justify-center">
+                  <span className="text-slate-400 font-mono text-xs">[VISUAL REDACTED]</span>
                </div>
                <div className="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                 <h3 className="text-xl font-bold text-white uppercase tracking-wider mb-2">Ballistic Vests</h3>
-                 <p className="text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">Lightweight composite armor offering maximum mobility without compromising Level IV rating.</p>
+                 <h3 className="text-xl font-bold text-slate-900 uppercase tracking-wider mb-2">Ballistic Vests</h3>
+                 <p className="text-sm text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">Lightweight composite armor offering maximum mobility without compromising Level IV rating.</p>
                </div>
             </GlassCard>
             
             {/* Category: Helmets */}
             <GlassCard delay={0.1} className="h-80 flex flex-col justify-end p-6 relative group overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-               <div className="absolute inset-0 bg-[#111] z-0 flex items-center justify-center">
-                  <span className="text-gray-700 font-mono text-xs">[VISUAL REDACTED]</span>
+               <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent z-10" />
+               <div className="absolute inset-0 bg-slate-100 z-0 flex items-center justify-center">
+                  <span className="text-slate-400 font-mono text-xs">[VISUAL REDACTED]</span>
                </div>
                <div className="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                 <h3 className="text-xl font-bold text-white uppercase tracking-wider mb-2">Combat Helmets</h3>
-                 <p className="text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">Integrated rail systems, NVG mounts, and impact-absorbing inner geometries.</p>
+                 <h3 className="text-xl font-bold text-slate-900 uppercase tracking-wider mb-2">Combat Helmets</h3>
+                 <p className="text-sm text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">Integrated rail systems, NVG mounts, and impact-absorbing inner geometries.</p>
                </div>
             </GlassCard>
 
             {/* Category: Load Carrying */}
             <GlassCard delay={0.2} className="h-80 flex flex-col justify-end p-6 relative group overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-               <div className="absolute inset-0 bg-[#111] z-0 flex items-center justify-center">
-                  <span className="text-gray-700 font-mono text-xs">[VISUAL REDACTED]</span>
+               <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent z-10" />
+               <div className="absolute inset-0 bg-slate-100 z-0 flex items-center justify-center">
+                  <span className="text-slate-400 font-mono text-xs">[VISUAL REDACTED]</span>
                </div>
                <div className="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                 <h3 className="text-xl font-bold text-white uppercase tracking-wider mb-2">Load Bearing</h3>
-                 <p className="text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">Modular chest rigs and belts for agile ammunition distribution and critical med-kits.</p>
+                 <h3 className="text-xl font-bold text-slate-900 uppercase tracking-wider mb-2">Load Bearing</h3>
+                 <p className="text-sm text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity">Modular chest rigs and belts for agile ammunition distribution and critical med-kits.</p>
                </div>
             </GlassCard>
           </div>
