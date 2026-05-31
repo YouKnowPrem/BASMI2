@@ -17,15 +17,14 @@ export const Hero = () => {
   return (
     // --- HERO SECTION WRAPPER ---
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-16">
-      
       {/* BACKGROUND GRAPHIC & SHADOW LAYER */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-15"
+          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-40"
           style={{ backgroundImage: 'url(/background.png)' }}
         />
         {/* Soft edge-blending gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/45 to-transparent" />
       </div>
 
       {/* CORE HERO INTERACTIVE PANEL */}
