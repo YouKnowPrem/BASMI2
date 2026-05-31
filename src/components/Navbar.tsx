@@ -8,7 +8,7 @@
 
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Building2, Compass, Plane, Shield, ShieldAlert } from 'lucide-react';
 
 export const Navbar = () => {
   // --- STATE & EFFETS ---
@@ -57,7 +57,6 @@ export const Navbar = () => {
           <div className="hidden lg:flex items-center justify-center space-x-2 xl:space-x-4">
             {/* Company Dropdown Trigger */}
             <div 
-              className="relative"
               onMouseEnter={() => setIsCompanyOpen(true)}
               onMouseLeave={() => setIsCompanyOpen(false)}
             >
@@ -74,16 +73,27 @@ export const Navbar = () => {
 
               {/* Company Dropdown Panel */}
               {isCompanyOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[240px] z-50">
-                  <div className="glass-panel p-4 rounded-xl border border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-xl animate-fade-in">
-                    <ul className="space-y-3 text-sm">
-                      <li>
-                        <Link to="/about" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">About BASMI</Link>
-                      </li>
-                      <li>
-                        <Link to="/about#mission" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Mission statement & Vision</Link>
-                      </li>
-                    </ul>
+                <div className="absolute left-0 right-0 top-full w-full bg-white/95 backdrop-blur-2xl border-y border-slate-200/80 shadow-lg py-10 z-50 animate-fade-in">
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center space-x-20">
+                    <Link 
+                      to="/about" 
+                      className="group flex flex-col items-center p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 w-48 text-center"
+                    >
+                      <div className="p-3 bg-slate-50 group-hover:bg-blue-50 rounded-xl transition-all duration-300 mb-3 shadow-sm border border-slate-100 group-hover:border-blue-100">
+                        <Building2 className="h-8 w-8 text-slate-500 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-300" />
+                      </div>
+                      <span className="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">About BASMI</span>
+                    </Link>
+
+                    <Link 
+                      to="/about#mission" 
+                      className="group flex flex-col items-center p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 w-48 text-center"
+                    >
+                      <div className="p-3 bg-slate-50 group-hover:bg-blue-50 rounded-xl transition-all duration-300 mb-3 shadow-sm border border-slate-100 group-hover:border-blue-100">
+                        <Compass className="h-8 w-8 text-slate-500 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-300" />
+                      </div>
+                      <span className="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Mission & Vision</span>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -91,7 +101,6 @@ export const Navbar = () => {
 
             {/* Integrated Solutions Dropdown Trigger */}
             <div 
-              className="relative"
               onMouseEnter={() => setIsSolutionsOpen(true)}
               onMouseLeave={() => setIsSolutionsOpen(false)}
             >
@@ -108,19 +117,37 @@ export const Navbar = () => {
 
               {/* Dropdown Panel */}
               {isSolutionsOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[350px] z-50">
-                  <div className="glass-panel p-5 rounded-xl border border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-xl animate-fade-in">
-                    <ul className="space-y-3 text-sm">
-                      <li>
-                        <Link to="/aerospace" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">1. Aerospace Systems</Link>
-                      </li>
-                      <li>
-                        <Link to="/tactical" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">2. Defence Equipments</Link>
-                      </li>
-                      <li>
-                        <Link to="/security" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">3. Hostile Vehicle Mitigation Solutions</Link>
-                      </li>
-                    </ul>
+                <div className="absolute left-0 right-0 top-full w-full bg-white/95 backdrop-blur-2xl border-y border-slate-200/80 shadow-lg py-10 z-50 animate-fade-in">
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center space-x-16">
+                    <Link 
+                      to="/aerospace" 
+                      className="group flex flex-col items-center p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 w-56 text-center"
+                    >
+                      <div className="p-3 bg-slate-50 group-hover:bg-blue-50 rounded-xl transition-all duration-300 mb-3 shadow-sm border border-slate-100 group-hover:border-blue-100">
+                        <Plane className="h-8 w-8 text-slate-500 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-300" />
+                      </div>
+                      <span className="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Aerospace Systems</span>
+                    </Link>
+
+                    <Link 
+                      to="/tactical" 
+                      className="group flex flex-col items-center p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 w-56 text-center"
+                    >
+                      <div className="p-3 bg-slate-50 group-hover:bg-blue-50 rounded-xl transition-all duration-300 mb-3 shadow-sm border border-slate-100 group-hover:border-blue-100">
+                        <Shield className="h-8 w-8 text-slate-500 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-300" />
+                      </div>
+                      <span className="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Defence Equipments</span>
+                    </Link>
+
+                    <Link 
+                      to="/security" 
+                      className="group flex flex-col items-center p-4 rounded-xl hover:bg-slate-50 transition-all duration-300 w-56 text-center"
+                    >
+                      <div className="p-3 bg-slate-50 group-hover:bg-blue-50 rounded-xl transition-all duration-300 mb-3 shadow-sm border border-slate-100 group-hover:border-blue-100">
+                        <ShieldAlert className="h-8 w-8 text-slate-500 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-300" />
+                      </div>
+                      <span className="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Hostile Vehicle Mitigation</span>
+                    </Link>
                   </div>
                 </div>
               )}
