@@ -1,16 +1,23 @@
 /** ============================================================================
  *  BASMI Defence Systems - Tactical & Mission Support (Tactical.tsx)
  *  ----------------------------------------------------------------------------
- *  Purpose: Displays the full-bleed interactive dynamic image splits for body
- *           armours, carry systems, and load-bearing configurations.
+ *  Purpose: Displays the centered Defence Equipments title and full-bleed
+ *           interactive dynamic image splits for body armours and carry systems.
  *  ============================================================================
  */
 
 export const Tactical = () => {
   return (
     // --- MAIN TACTICAL LAYOUT CONTAINER ---
-    <div className="min-h-screen bg-background pt-32 pb-24">
+    <div className="min-h-screen bg-background pt-32 pb-24 animate-fade-in">
       
+      {/* SECTION HEADER BLOCK */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase mb-3">
+          Defence <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 font-extrabold">Equipments</span>
+        </h1>
+      </div>
+
       {/* FULL-BLEED INTERACTIVE SECTION: Dynamic Horizontal Splits */}
       <div className="w-full bg-slate-950 border-y border-slate-800 relative shadow-xl">
         <div className="group/container flex flex-col lg:flex-row w-full min-h-[90vh] bg-slate-950">
@@ -25,9 +32,6 @@ export const Tactical = () => {
                 Ballistic<br/>Protection
               </h3>
             </div>
-            <div className="absolute inset-x-0 bottom-16 md:bottom-24 flex justify-center z-20 opacity-0 group-hover/card:opacity-100 transition-all duration-[700ms] translate-y-6 group-hover/card:translate-y-0 delay-75">
-               <span className="border border-white/30 bg-black/40 backdrop-blur-md text-white px-8 py-3 text-xs md:text-sm uppercase tracking-[0.25em] font-semibold hover:bg-white/20 hover:border-white transition-all">Explore Category</span>
-            </div>
           </div>
 
           {/* Card 2: Carry Systems */}
@@ -40,9 +44,6 @@ export const Tactical = () => {
                 Carrying<br/>Systems
               </h3>
             </div>
-            <div className="absolute inset-x-0 bottom-16 md:bottom-24 flex justify-center z-20 opacity-0 group-hover/card:opacity-100 transition-all duration-[700ms] translate-y-6 group-hover/card:translate-y-0 delay-75">
-               <span className="border border-white/30 bg-black/40 backdrop-blur-md text-white px-8 py-3 text-xs md:text-sm uppercase tracking-[0.25em] font-semibold hover:bg-white/20 hover:border-white transition-all">Explore Category</span>
-            </div>
           </div>
 
           {/* Card 3: Apparel and Tactical Clothing */}
@@ -54,9 +55,6 @@ export const Tactical = () => {
               <h3 className="font-bold text-white text-3xl md:text-5xl uppercase tracking-[0.2em] md:leading-tight transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] opacity-80 group-hover/card:opacity-100 group-hover/card:drop-shadow-[0_0_20px_rgba(255,255,255,0.9)] group-hover/card:scale-105">
                 Tactical<br/>Clothing
               </h3>
-            </div>
-            <div className="absolute inset-x-0 bottom-16 md:bottom-24 flex justify-center z-20 opacity-0 group-hover/card:opacity-100 transition-all duration-[700ms] translate-y-6 group-hover/card:translate-y-0 delay-75">
-               <span className="border border-white/30 bg-black/40 backdrop-blur-md text-white px-8 py-3 text-xs md:text-sm uppercase tracking-[0.25em] font-semibold hover:bg-white/20 hover:border-white transition-all">Explore Category</span>
             </div>
           </div>
 
