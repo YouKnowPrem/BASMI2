@@ -37,12 +37,11 @@ export const Footer = () => {
 
           {/* COLUMN 2: Corporate Directory & Quick Links */}
           <div className="md:pl-8">
-            <h3 className="text-sm font-bold text-slate-900 tracking-wider uppercase mb-4">Company</h3>
+            <h3 className="text-sm font-bold text-slate-900 tracking-wider uppercase mb-4">Solutions</h3>
             <ul className="space-y-3 text-sm text-slate-600">
-              <li><Link to="/about" className="hover:text-blue-600 transition-colors font-medium">Company</Link></li>
-              <li><Link to="/indigenization" className="hover:text-blue-600 transition-colors font-medium">Indigenisation</Link></li>
-              <li><Link to="/aerospace" className="hover:text-blue-600 transition-colors font-medium">Aerospace & Naval</Link></li>
-              <li><Link to="/contact" className="hover:text-blue-600 transition-colors font-medium">Contact</Link></li>
+              <li><Link to="/aerospace" className="hover:text-blue-600 transition-colors font-medium">Aerospace Systems</Link></li>
+              <li><Link to="/tactical" className="hover:text-blue-600 transition-colors font-medium">Defence Equipments</Link></li>
+              <li><Link to="/security" className="hover:text-blue-600 transition-colors font-medium">Hostile Vehicle Mitigation Solutions</Link></li>
             </ul>
           </div>
 

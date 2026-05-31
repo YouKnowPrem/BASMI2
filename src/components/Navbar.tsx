@@ -79,11 +79,9 @@ export const Navbar = () => {
                     <ul className="space-y-3 text-sm">
                       <li>
                         <Link to="/about" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">About BASMI</Link>
-                        <span className="text-xs text-slate-500 block mt-0.5">Corporate profile & capabilities</span>
                       </li>
                       <li>
                         <Link to="/about#mission" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Mission statement & Vision</Link>
-                        <span className="text-xs text-slate-500 block mt-0.5">Operational targets & core values</span>
                       </li>
                     </ul>
                   </div>
@@ -112,18 +110,15 @@ export const Navbar = () => {
               {isSolutionsOpen && (
                 <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[350px] z-50">
                   <div className="glass-panel p-5 rounded-xl border border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-xl animate-fade-in">
-                    <ul className="space-y-4 text-sm">
+                    <ul className="space-y-3 text-sm">
                       <li>
                         <Link to="/aerospace" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">1. Aerospace Systems</Link>
-                        <span className="text-xs text-slate-500 block mt-0.5">Advanced aerospace & flight technologies</span>
                       </li>
                       <li>
                         <Link to="/tactical" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">2. Defence Equipments</Link>
-                        <span className="text-xs text-slate-500 block mt-0.5">Tactical systems integration & supply</span>
                       </li>
                       <li>
                         <Link to="/security" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">3. Hostile Vehicle Mitigation Solutions</Link>
-                        <span className="text-xs text-slate-500 block mt-0.5">Kinetic impact barriers & perimeter security</span>
                       </li>
                     </ul>
                   </div>
