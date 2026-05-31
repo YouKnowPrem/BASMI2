@@ -81,7 +81,7 @@ export const Navbar = () => {
                         <Link to="/about" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">About BASMI</Link>
                       </li>
                       <li>
-                        <Link to="/about#mission" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Mission statement & Vision</Link>
+                        <Link to="/about#mission" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Mission Statement & Vision</Link>
                       </li>
                     </ul>
                   </div>
@@ -112,13 +112,13 @@ export const Navbar = () => {
                   <div className="glass-panel p-5 rounded-xl border border-slate-200/80 bg-white/95 backdrop-blur-2xl shadow-xl animate-fade-in">
                     <ul className="space-y-3 text-sm">
                       <li>
-                        <Link to="/aerospace" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">1. Aerospace Systems</Link>
+                        <Link to="/aerospace" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Aerospace Systems</Link>
                       </li>
                       <li>
-                        <Link to="/tactical" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">2. Defence Equipments</Link>
+                        <Link to="/tactical" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Defence Equipments</Link>
                       </li>
                       <li>
-                        <Link to="/security" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">3. Hostile Vehicle Mitigation Solutions</Link>
+                        <Link to="/security" className="text-slate-800 hover:text-blue-600 block font-semibold transition-colors">Hostile Vehicle Mitigation Solutions</Link>
                       </li>
                     </ul>
                   </div>
@@ -173,7 +173,7 @@ export const Navbar = () => {
             
             <div className="pl-4 space-y-1 text-sm border-l-2 border-slate-200 ml-4 mb-2">
               <Link to="/about" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• About BASMI</Link>
-              <Link to="/about#mission" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Mission statement & Vision</Link>
+              <Link to="/about#mission" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Mission Statement & Vision</Link>
             </div>
 
             {/* Mobile Dropdown Header for Solutions */}
@@ -182,9 +182,9 @@ export const Navbar = () => {
             </div>
             
             <div className="pl-4 space-y-1 text-sm border-l-2 border-slate-200 ml-4 mb-2">
-              <Link to="/aerospace" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 1. Aerospace Systems</Link>
-              <Link to="/tactical" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 2. Defence Equipments</Link>
-              <Link to="/security" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• 3. Hostile Vehicle Mitigation Solutions</Link>
+              <Link to="/aerospace" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Aerospace Systems</Link>
+              <Link to="/tactical" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Defence Equipments</Link>
+              <Link to="/security" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-slate-600 hover:text-blue-600 font-semibold">• Hostile Vehicle Mitigation Solutions</Link>
             </div>
 
             <NavLink

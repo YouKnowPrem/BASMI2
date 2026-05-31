@@ -101,7 +101,7 @@ export const About = () => {
               <div className="bg-blue-50 p-3 rounded-xl border border-blue-100 text-blue-600">
                 <Target className="h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 uppercase tracking-wider">Vision Statement</h2>
+              <h2 className="text-2xl font-bold text-slate-900 uppercase tracking-wider">Vision</h2>
             </div>
             <p className="text-slate-600 leading-relaxed text-justify text-sm md:text-base flex-grow">
               To be a globally trusted aerospace, defence, and security technology partner, advancing indigenous capability, fostering innovation and collaboration, and delivering integrated, high-performance solutions that enhance operational readiness and support national and global security objectives, while contributing to Make in India and Atmanirbhar Bharat.
