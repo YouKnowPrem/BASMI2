@@ -57,7 +57,7 @@ export const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-32 pb-24">
+    <div className="min-h-screen bg-background pt-32 lg:pt-48 pb-24 lg:pb-36">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 1. CORPORATE HEADER INTRO */}
@@ -83,7 +83,7 @@ export const About = () => {
         </div>
 
         {/* 2. MISSION AND VISION GRID */}
-        <div id="mission" className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24 scroll-mt-32">
+        <div id="mission" className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 gap-8 mb-24 lg:mb-32 scroll-mt-32">
           <GlassCard className="p-8 md:p-10 border border-slate-200/80 flex flex-col h-full hover:border-blue-500/30 transition-all duration-300">
             <div className="flex items-center space-x-4 mb-6">
               <div className="bg-blue-50 p-3 rounded-xl border border-blue-100 text-blue-600">

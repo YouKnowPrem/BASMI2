@@ -13,7 +13,7 @@ import { ArrowRight } from 'lucide-react';
 export const Hero = () => {
   return (
     // --- HERO SECTION WRAPPER ---
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-16">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-16 lg:pt-28">
       {/* BACKGROUND GRAPHIC & SHADOW LAYER */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -25,7 +25,7 @@ export const Hero = () => {
       </div>
 
       {/* CORE HERO INTERACTIVE PANEL */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16 lg:pt-24 lg:pb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

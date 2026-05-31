@@ -17,19 +17,19 @@ import { Flag, ShieldAlert, Cpu, Globe } from 'lucide-react';
 export const Indigenization = () => {
   return (
     // --- MAIN INDIGENISATION PAGE ---
-    <div className="min-h-screen bg-background pt-32 pb-24">
+    <div className="min-h-screen bg-background pt-32 lg:pt-48 pb-24 lg:pb-36">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* PAGE HEADING */}
         <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight uppercase mb-4">
           Make in <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-slate-600 to-green-600 font-extrabold">India</span>
         </h1>
-        <p className="text-lg text-slate-600 font-light max-w-3xl mb-16">
+        <p className="text-lg text-slate-600 font-light max-w-3xl mb-16 lg:mb-24">
           BASMI proudly supports India’s indigenous defence manufacturing ecosystem, committing to complete self-reliance in strategic technologies.
         </p>
 
         {/* FOUR-COLUMN CORE INDIGENOUS STRATEGY */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           
           {/* Card 1: Local Manufacturing */}
           <GlassCard className="p-8 text-center bg-gradient-to-br from-slate-50 to-transparent">

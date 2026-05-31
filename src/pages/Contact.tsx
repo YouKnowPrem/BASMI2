@@ -15,7 +15,7 @@ import { GlassCard } from '../components/GlassCard';
 
 export const Contact = () => {
   return (
-    <div className="min-h-screen bg-background pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background pt-32 lg:pt-48 pb-24 lg:pb-36 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* PAGE HEADER INTRODUCTION */}
@@ -23,7 +23,7 @@ export const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 lg:mb-24"
         >
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-widest uppercase mb-4">
             Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-slate-600 to-green-600 font-extrabold">Us</span>
@@ -34,7 +34,7 @@ export const Contact = () => {
         </motion.div>
 
         {/* TWO-COLUMN CONTACT OVERVIEW */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           
           {/* COLUMN 1: Corporate Details */}
           <div className="space-y-8">
