@@ -15,7 +15,7 @@ import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 // Helper utility for merging Tailwind CSS classnames dynamically
-export function cn(...inputs: ClassValue[]) {
+function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
@@ -61,9 +61,9 @@ export const GlassCard: React.FC<GlassCardProps> = ({
       <div 
         className="liquid-glow" 
         style={{
-          ['--x' as any]: `${mousePosition.x}px`,
-          ['--y' as any]: `${mousePosition.y}px`,
-        }}
+          '--x': `${mousePosition.x}px`,
+          '--y': `${mousePosition.y}px`,
+        } as React.CSSProperties}
       />
       {/* Card Content Layer */}
       <div className="relative z-10">

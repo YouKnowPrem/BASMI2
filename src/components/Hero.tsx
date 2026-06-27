@@ -41,13 +41,8 @@ export const Hero = () => {
             </span>
           </h1>
           
-          {/* THEMATIC DESCRIPTION COPY */}
-          <p className="text-base md:text-lg text-slate-600 mb-10 max-w-2xl font-light leading-relaxed">
-            Delivering end-to-end hostile vehicle mitigation, perimeter security, access control, and integrated protection systems.
-          </p>
-          
           {/* ACTION BUTTON CALL-TO-ACTIONS */}
-          <div className="flex justify-center w-full max-w-md mx-auto sm:max-w-none">
+          <div className="flex justify-center w-full max-w-md mx-auto sm:max-w-none mt-8">
             <Link 
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-semibold transition-all shadow-md hover:shadow-blue-500/25 group cursor-pointer"
