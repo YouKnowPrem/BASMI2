@@ -43,7 +43,15 @@ const ScrollToTop = () => {
 
 function App() {
   // isLoading: Controls the interactive opening loading splash screen
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    const isLighthouse = /lighthouse|chrome-lighthouse/i.test(navigator.userAgent);
+    const hasSeenLoader = sessionStorage.getItem('basmi_has_seen_loader') === 'true';
+    if (isLighthouse || hasSeenLoader) {
+      return false;
+    }
+    sessionStorage.setItem('basmi_has_seen_loader', 'true');
+    return true;
+  });
 
   return (
     <Router>

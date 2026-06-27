@@ -8,17 +8,17 @@
 
 export const SecurityParams = () => {
   const row1 = [
-    { title: "Bollards", image: "/bollards.png" },
-    { title: "Crash Rated Gates", image: "/gates.png" },
-    { title: "Road Blockers", image: "/road_blocker.png" },
-    { title: "Boom Barriers", image: "/boom_barrier.png" }
+    { title: "Bollards", image: "/bollards.webp" },
+    { title: "Crash Rated Gates", image: "/gates.webp" },
+    { title: "Road Blockers", image: "/road_blocker.webp" },
+    { title: "Boom Barriers", image: "/boom_barrier.webp" }
   ];
 
   const row2 = [
-    { title: "Crash Barriers", image: "/crash_barriers.png" },
-    { title: "Tyre Killers", image: "/tyre_killer.png" },
-    { title: "Access Barriers", image: "/flap_barrier.png" },
-    { title: "Perimeter Security", image: "/perimeter_security.png" }
+    { title: "Crash Barriers", image: "/crash_barriers.webp" },
+    { title: "Tyre Killers", image: "/tyre_killer.webp" },
+    { title: "Access Barriers", image: "/flap_barrier.webp" },
+    { title: "Perimeter Security", image: "/perimeter_security.webp" }
   ];
 
   return (

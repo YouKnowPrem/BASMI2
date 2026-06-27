@@ -30,7 +30,7 @@ export const Aerospace = () => {
           >
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.15)_0%,transparent_60%)] opacity-0 group-hover/card:opacity-100 transition-opacity duration-[600ms] pointer-events-none z-10 mix-blend-overlay" />
             <img 
-              src="/aerospace_drones.png" 
+              src="/aerospace_drones.webp" 
               alt="Drones" 
               loading="lazy" 
               decoding="async" 
@@ -52,7 +52,7 @@ export const Aerospace = () => {
           >
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.15)_0%,transparent_60%)] opacity-0 group-hover/card:opacity-100 transition-opacity duration-[600ms] pointer-events-none z-10 mix-blend-overlay" />
             <img 
-              src="/aerospace_motors.png" 
+              src="/aerospace_motors.webp" 
               alt="Motors" 
               loading="lazy" 
               decoding="async" 
@@ -74,7 +74,7 @@ export const Aerospace = () => {
           >
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.15)_0%,transparent_60%)] opacity-0 group-hover/card:opacity-100 transition-opacity duration-[600ms] pointer-events-none z-10 mix-blend-overlay" />
             <img 
-              src="/aerospace_controllers.png" 
+              src="/aerospace_controllers.webp" 
               alt="Flight Controllers" 
               loading="lazy" 
               decoding="async" 

@@ -29,7 +29,7 @@ export const Tactical = () => {
           >
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.15)_0%,transparent_60%)] opacity-0 group-hover/card:opacity-100 transition-opacity duration-[600ms] pointer-events-none z-10 mix-blend-overlay" />
             <img 
-              src="/soldier_ballistic.png" 
+              src="/soldier_ballistic.webp" 
               alt="Ballistic Protection" 
               loading="lazy" 
               decoding="async" 
@@ -51,7 +51,7 @@ export const Tactical = () => {
           >
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.15)_0%,transparent_60%)] opacity-0 group-hover/card:opacity-100 transition-opacity duration-[600ms] pointer-events-none z-10 mix-blend-overlay" />
             <img 
-              src="/soldier_carrying.png" 
+              src="/soldier_carrying.webp" 
               alt="Carrying Systems" 
               loading="lazy" 
               decoding="async" 
@@ -73,7 +73,7 @@ export const Tactical = () => {
           >
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.15)_0%,transparent_60%)] opacity-0 group-hover/card:opacity-100 transition-opacity duration-[600ms] pointer-events-none z-10 mix-blend-overlay" />
             <img 
-              src="/soldier_clothing.png" 
+              src="/soldier_clothing.webp" 
               alt="Tactical Clothing" 
               loading="lazy" 
               decoding="async" 
@@ -96,7 +96,7 @@ export const Tactical = () => {
         <div className="relative overflow-hidden h-[45vh] lg:h-[60vh] group/card transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.15)_0%,transparent_60%)] opacity-0 group-hover/card:opacity-100 transition-opacity duration-[600ms] pointer-events-none z-10 mix-blend-overlay" />
           <img 
-            src="/tactical_naval.png" 
+            src="/tactical_naval.webp" 
             alt="Naval Equipment & Accessories" 
             loading="lazy" 
             decoding="async" 

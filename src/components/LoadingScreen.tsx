@@ -22,7 +22,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
   useEffect(() => {
     // --- SIMULATED LOADING TIMELINE ---
-    const duration = 2500; // 2.5 seconds total loading duration
+    const duration = 1000; // 1.0 second total loading duration
     const intervalTime = 30; // Milliseconds per tick update
     const steps = duration / intervalTime;
     let currentStep = 0;
@@ -67,7 +67,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           className="relative mb-12"
         >
           <img 
-            src="/basmi_logo.png" 
+            src="/basmi_logo.webp" 
             alt="BASMI Logo" 
             className="w-64 lg:w-96 h-auto object-contain drop-shadow-2xl brightness-125"
             onError={(e) => { e.currentTarget.style.display = 'none'; }}

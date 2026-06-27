@@ -18,7 +18,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat opacity-40"
-          style={{ backgroundImage: 'url(/background.png)' }}
+          style={{ backgroundImage: 'url(/background.webp)' }}
         />
         {/* Soft edge-blending gradients */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/45 to-transparent" />
