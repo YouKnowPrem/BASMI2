@@ -49,7 +49,15 @@ export const Footer = () => {
         {/* BOTTOM METADATA & COPYRIGHT */}
         <div className="mt-16 pt-8 border-t border-slate-200 flex items-center justify-center text-center">
           <p className="text-sm text-slate-400 font-medium">
-            © 2026 All rights reserved.
+            © 2026 All rights reserved. | Made by{' '}
+            <a 
+              href="https://www.webitup24.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-slate-500 hover:text-blue-600 transition-colors duration-200"
+            >
+              WebItUp24
+            </a>
           </p>
         </div>
       </div>
