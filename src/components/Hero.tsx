@@ -29,12 +29,13 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          style={{ willChange: 'transform, opacity' }}
           className="max-w-4xl mx-auto flex flex-col items-center text-center"
         >
           
           {/* SECURE CAPITALIZED HERO HEADING */}
-          <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] mb-6 uppercase">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] mb-6 uppercase">
             Securing People, Protecting Assets,<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 font-extrabold">
               Enabling Operations through Self Reliance

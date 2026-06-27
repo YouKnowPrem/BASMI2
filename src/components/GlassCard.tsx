@@ -49,6 +49,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay }}
+      style={{ willChange: 'transform, opacity', ...props.style }}
       className={cn(
         "relative overflow-hidden glass-panel",
         hoverEffect && "glass-panel-hover",

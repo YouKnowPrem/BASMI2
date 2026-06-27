@@ -34,20 +34,20 @@ export const Navbar = () => {
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm py-3' 
-          : 'bg-transparent border-b border-transparent py-5'
+          ? 'bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm py-1.5 sm:py-3' 
+          : 'bg-transparent border-b border-transparent py-2 sm:py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24 lg:h-28">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-28">
           
           {/* 1. BRAND LOGO (LEFT) - SLIGHTLY BIGGER */}
           <div className="flex-1 flex justify-start items-center">
-            <NavLink to="/" className="flex items-center py-2 shrink-0">
+            <NavLink to="/" className="flex items-center py-1 sm:py-2 shrink-0">
               <img 
                 src="/BASMI_svg.svg" 
                 alt="BASMI Logo" 
-                className="h-18 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105" 
+                className="h-10 sm:h-14 lg:h-20 w-auto object-contain transition-transform duration-300 hover:scale-105" 
                 onError={(e) => { e.currentTarget.style.display = 'none'; }} 
               />
             </NavLink>

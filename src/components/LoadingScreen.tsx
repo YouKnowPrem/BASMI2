@@ -47,7 +47,8 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     <motion.div
       key="loading-screen"
       initial={{ opacity: 1 }}
-      exit={{ opacity: 0, y: -50, transition: { duration: 0.8, ease: "easeInOut" } }}
+      exit={{ opacity: 0, y: -50, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
+      style={{ willChange: 'transform, opacity' }}
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0a0f16] overflow-hidden"
     >
       {/* GLOWING AMBIENT RADIAL LIGHT IN BACKDROP */}
@@ -74,6 +75,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           {/* Breathing glow backing behind brand logo */}
           <motion.div 
             className="absolute inset-0 bg-blue-500/10 rounded-full blur-xl -z-10"
+            style={{ willChange: 'transform' }}
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />

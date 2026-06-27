@@ -24,7 +24,8 @@ export const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          style={{ willChange: 'transform, opacity' }}
           className="text-center mb-16 lg:mb-24"
         >
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-widest uppercase mb-4">
@@ -88,7 +89,8 @@ export const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                style={{ willChange: 'transform, opacity' }}
                 className="text-center py-12 space-y-6"
               >
                 <div className="mx-auto w-16 h-16 bg-emerald-50 border border-emerald-200 rounded-full flex items-center justify-center text-emerald-600 shadow-sm">
