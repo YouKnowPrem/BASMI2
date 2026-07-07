@@ -6,20 +6,56 @@
  *  ============================================================================
  */
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export const Hero = () => {
+  const [loadVideo, setLoadVideo] = useState(false);
+  const [videoActive, setVideoActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detect mobile screens to avoid loading the large video file
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    // Delay video loading to optimize page speed/LCP score
+    const timer = setTimeout(() => {
+      setLoadVideo(true);
+    }, 1000);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     // --- HERO SECTION WRAPPER ---
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-16 lg:pt-28">
       {/* BACKGROUND GRAPHIC & SHADOW LAYER */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-40"
-          style={{ backgroundImage: 'url(/background.webp)' }}
-        />
+        {loadVideo && !isMobile && (
+          <video
+            src="/Basmi.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            disablePictureInPicture
+            controlsList="nodownload"
+            onPlay={() => setVideoActive(true)}
+            className={`absolute inset-0 w-full h-full object-cover pointer-events-none transition-opacity duration-1000 ${
+              videoActive ? 'opacity-40' : 'opacity-0'
+            }`}
+          />
+        )}
         {/* Soft edge-blending gradients */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/45 to-transparent" />
       </div>
